@@ -39,7 +39,7 @@ module mru(clk, rst, b1, b2, b3, b4, b5, l1, l2, l3, l4, l5);
 			
 			if (used_counter[0] && used_counter[1] && used_counter[2] && used_counter[3] && used_counter[4]) begin
 				for (reg [2:0] i = 3'd0; i < 3'd5; i++) begin
-					if (index_value < used_counter[i]) begin
+					if (index_value > used_counter[i]) begin
 						index_value <= used_counter[i];
 						index <= i;
 					end
