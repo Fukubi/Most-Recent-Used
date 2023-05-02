@@ -45,7 +45,7 @@ module mru(clk, rst, b1, b2, b3, b4, b5, l1, l2, l3, l4, l5);
 					end
 				end
 				
-				used_counter[index] = 10'd0;
+				used_counter[index] <= 10'd0;
 			end
 			
 			if (!used_counter[0]) begin
