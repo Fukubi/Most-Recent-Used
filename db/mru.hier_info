@@ -1,0 +1,15 @@
+|mru
+clk => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+b1 => ~NO_FANOUT~
+b2 => ~NO_FANOUT~
+b3 => ~NO_FANOUT~
+b4 => ~NO_FANOUT~
+b5 => ~NO_FANOUT~
+l1 <= <GND>
+l2 <= <GND>
+l3 <= <GND>
+l4 <= <GND>
+l5 <= <GND>
+
+

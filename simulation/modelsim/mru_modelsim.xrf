@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/noname/Documentos/mru/mru.sv
+source_file = 1, /home/noname/Documentos/mru/db/mru.cbx.xml
+design_name = mru
+instance = comp, \clk~I\, clk, mru, 1
+instance = comp, \rst~I\, rst, mru, 1
+instance = comp, \b1~I\, b1, mru, 1
+instance = comp, \b2~I\, b2, mru, 1
+instance = comp, \b3~I\, b3, mru, 1
+instance = comp, \b4~I\, b4, mru, 1
+instance = comp, \b5~I\, b5, mru, 1
+instance = comp, \l1~I\, l1, mru, 1
+instance = comp, \l2~I\, l2, mru, 1
+instance = comp, \l3~I\, l3, mru, 1
+instance = comp, \l4~I\, l4, mru, 1
+instance = comp, \l5~I\, l5, mru, 1
