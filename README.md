@@ -6,12 +6,12 @@ A SystemVerilog description for a MRU
 
 ```mermaid
 stateDiagram-v2
-	q0 : Estado Inicial
-	q1 : Inserir na Stack
+	q0 : Initial State
+	q1 : Push to Stack
 
 	[*] --> q0
 	q0 --> q1 : input
-	q1 --> q0 : stack_alterada
+	q1 --> q0 : stack_changed
 ```
 
 ## How a MRU works
