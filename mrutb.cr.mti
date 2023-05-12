@@ -1,9 +1,9 @@
-/home/noname/Documentos/mru/mru.sv {1 {vlog -work work -sv /home/noname/Documentos/mru/mru.sv
+/home/noname/Documentos/mru/tb_mru.sv {1 {vlog -work work -sv /home/noname/Documentos/mru/tb_mru.sv
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module mru
+-- Compiling module tb_mru
 
 Top level modules:
-	mru
+	tb_mru
 
 } {} {}} /home/noname/Documentos/mru/timer.sv {1 {vlog -work work -sv /home/noname/Documentos/mru/timer.sv
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -11,12 +11,5 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	timer
-
-} {} {}} /home/noname/Documentos/mru/tb_mru.sv {1 {vlog -work work -sv /home/noname/Documentos/mru/tb_mru.sv
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module tb_mru
-
-Top level modules:
-	tb_mru
 
 } {} {}}

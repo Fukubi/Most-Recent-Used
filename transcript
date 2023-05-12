@@ -1,7 +1,31 @@
 # Compile of mru.sv failed with 1 errors.
-# Compile of tb_mru.sv failed with 1 errors.
+# Compile of tb_mru.sv was successful.
 # Compile of timer.sv was successful.
-# 3 compiles, 2 failed with 2 errors. 
+# 3 compiles, 1 failed with 1 error. 
+# Compile of mru.sv failed with 1 errors.
+# Compile of tb_mru.sv was successful.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
+# Compile of mru.sv failed with 1 errors.
+# Compile of tb_mru.sv was successful.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
+# Compile of mru.sv failed with 1 errors.
+# Compile of tb_mru.sv was successful.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
+# Compile of mru.sv failed with 1 errors.
+# Compile of tb_mru.sv was successful.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
+# Compile of mru.sv failed with 1 errors.
+# Compile of tb_mru.sv was successful.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
+# Compile of mru.sv failed with 1 errors.
+# Compile of tb_mru.sv was successful.
+# Compile of timer.sv was successful.
+# 3 compiles, 1 failed with 1 error. 
 # Compile of mru.sv failed with 1 errors.
 # Compile of tb_mru.sv was successful.
 # Compile of timer.sv was successful.
@@ -14,4 +38,6 @@
 # Compile of tb_mru.sv was successful.
 # Compile of timer.sv was successful.
 # 3 compiles, 0 failed with no errors. 
+clear
+# TERM environment variable not set.
 vsim -l /dev/null -gui work.tb_mru

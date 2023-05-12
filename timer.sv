@@ -1,4 +1,4 @@
-`define TIME_50MHZ 32'd49999999
+`define TIME_50MHZ 32'd24999999
 `define TIME_SIM 32'd5
 
 module timer(clk, rst, timedClk);
@@ -14,7 +14,7 @@ module timer(clk, rst, timedClk);
     end else begin
       counter++;
 
-      if (counter == `TIME_50MHZ) begin
+      if (counter == `TIME_SIM) begin
         timedClk <= 1'd1;
         counter <= 32'd0;
       end else begin

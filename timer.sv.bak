@@ -1,5 +1,5 @@
-`define TIME_50MHZ 32'd49999999
-`define TIME_SIM 32'd5
+`define TIME_50MHZ 32'd24999999
+`define TIME_SIM 32'd2.5
 
 module timer(clk, rst, timedClk);
   input clk, rst;
@@ -14,7 +14,6 @@ module timer(clk, rst, timedClk);
     end else begin
       counter++;
 
-      $display("%b", timedClk);
       if (counter == `TIME_SIM) begin
         timedClk <= 1'd1;
         counter <= 32'd0;
