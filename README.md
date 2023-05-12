@@ -2,6 +2,18 @@
 
 A SystemVerilog description for a MRU
 
+## States
+
+```mermaid
+stateDiagram-v2
+	q0 : Estado Inicial
+	q1 : Inserir na Stack
+
+	[*] --> q0
+	q0 --> q1 : input
+	q1 --> q0 : stack_alterada
+```
+
 ## How a MRU works
 
 The MRU saves the time when a input is pressed and, after the limit size is reached, it erases the input with the most recent time
