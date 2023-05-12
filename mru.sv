@@ -23,7 +23,7 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         l3 = 1'b0;
         l4 = 1'b0;
 
-        stack = 25'd0;
+        stack = 15'd0;
       end
       INITIAL: begin
         l1 = 1'b0;
@@ -31,7 +31,7 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         l3 = 1'b0;
         l4 = 1'b0;
 
-        for (reg [2:0] i = 0; i < 3'd5; i++) begin
+        for (reg [2:0] i = 0; i < 3'd3; i++) begin
           if (stack[i] == 3'd1) begin
             l1 = 1'b1;
           end else if (stack[i] == 3'd2) begin
@@ -44,6 +44,23 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
         end
       end
       PUSH: begin
+          l1 = 1'b0;
+          l2 = 1'b0;
+          l3 = 1'b0;
+          l4 = 1'b0;
+  
+          for (reg [2:0] i = 0; i < 3'd3; i++) begin
+            if (stack[i] == 3'd1) begin
+              l1 = 1'b1;
+            end else if (stack[i] == 3'd2) begin
+              l2 = 1'b1;
+            end else if (stack[i] == 3'd3) begin
+              l3 = 1'b1;
+            end else if (stack[i] == 3'd4) begin
+              l4 = 1'b1;
+            end
+          end
+        
           if (stack[2] == 0) stack = stack << 5;
 
           if (b1) begin
