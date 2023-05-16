@@ -7,6 +7,7 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
   reg timedClk;
 
   reg [2:0][4:0] stack;
+  reg [2:0][4:0] stack_ff;
 
   enum {BEGIN, INITIAL, PUSH} ActualState, NextState;
 
@@ -15,6 +16,8 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
   always_comb begin
     if (rst) ActualState = BEGIN;
     else ActualState = NextState;
+	 
+	 stack = stack_ff;
 
     case (ActualState)
       BEGIN: begin
@@ -78,6 +81,7 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
 
   always_ff @(posedge timedClk) begin
     NextState <= ActualState;
+	 stack_ff <= stack;
 
     case (NextState)
       BEGIN: NextState <= INITIAL;
