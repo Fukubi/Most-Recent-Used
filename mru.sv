@@ -14,9 +14,6 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
   timer t(.clk(clk), .rst(rst), .timedClk(timedClk));
 
   always_comb begin
-    if (rst) ActualState = BEGIN;
-    else ActualState = NextState;
-	 
 	 stack = stack_ff;
 
     case (ActualState)
@@ -79,14 +76,25 @@ module mru(clk, rst, b1, b2, b3, b4, l1, l2, l3, l4);
     endcase
   end
 
-  always_ff @(posedge timedClk) begin
-    NextState <= ActualState;
-	 stack_ff <= stack;
-
-    case (NextState)
-      BEGIN: NextState <= INITIAL;
-      INITIAL: if (b1 || b2 || b3 || b4) NextState <= PUSH;
-      PUSH: NextState <= INITIAL;
+  always_ff @(posedge timedClk, posedge rst) begin
+	 if (rst) begin
+		ActualState <= BEGIN;
+		
+		stack_ff <= 15'd0;
+	 end else begin
+		ActualState <= NextState;
+		
+		stack_ff <= stack;
+	 end
+  end
+  
+  always_comb begin
+	 NextState = ActualState;
+  
+	 case (ActualState)
+      BEGIN: NextState = INITIAL;
+      INITIAL: if (b1 || b2 || b3 || b4) NextState = PUSH;
+      PUSH: NextState = INITIAL;
     endcase
   end
 endmodule
